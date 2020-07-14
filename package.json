@@ -3,11 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "directories": {
-    "lib": "lib"
-  },
   "dependencies": {
-    "lodash": "^4.17.19",
     "query-string": "6.13.1"
   },
   "devDependencies": {
@@ -24,10 +20,11 @@
     "typescript": "^3.8.3"
   },
   "scripts": {
+    "compile": "tsc",
     "watch": "tsc -w",
     "lint": "tslint -p tsconfig.json",
     "execute": "ts-node test.ts",
-    "test": "ts-mocha src/**/*.spec.ts"
+    "test": "ts-mocha test/**/*.spec.ts"
   },
   "author": "Stavros Zavrakas",
   "license": "ISC"
