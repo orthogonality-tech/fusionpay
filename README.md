@@ -9,7 +9,7 @@ This module is the implementation of the process above.
 ## How to use it
 
 ```
-const fusionPay = require('fusionpay');
+const fusionPay = require('fusionpay-sdk');
 
 const API_KEY = 'abcdefgh';
 
@@ -28,7 +28,8 @@ const params = {
   }
 };
 
-const signature: string = fusionPay.sign(params);
+const signature = fusionPay.sign(params);
+console.log('The signature is', signature);
 
 // Use axios to fire the request
 ```

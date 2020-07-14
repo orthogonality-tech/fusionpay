@@ -5,7 +5,7 @@ function initialize (config: Configuration) {
   configuration.api_key = config.api_key;
 };
 
-export default {
+export {
   initialize,
   sign
 };
