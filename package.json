@@ -27,5 +27,9 @@
     "test": "ts-mocha test/**/*.spec.ts"
   },
   "author": "Stavros Zavrakas",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/orthogonality-tech/fusionpay"
+  }
 }
