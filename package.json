@@ -2,7 +2,7 @@
   "name": "fusionpay-signature",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "dependencies": {
     "query-string": "6.13.1"
   },
