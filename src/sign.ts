@@ -1,5 +1,6 @@
 import crypto from 'crypto';
 import queryString from 'query-string';
+import configuration from './configuration';
 
 interface Payload {
   [key: string]: string | object | null | number 
@@ -10,8 +11,6 @@ const valid_types = [
   'boolean',
   'number'
 ];
-
-const api_key: string = 'aaaaa';
 
 function sign(payload: Payload): string {
   const payload_to_sign = Object.keys(payload).reduce((acc, key) => {
@@ -34,7 +33,7 @@ function sign(payload: Payload): string {
 
   const stringified: string = queryString.stringify(payload_to_sign);
 
-  const string_to_hash: string = `${stringified}${api_key}`;
+  const string_to_hash: string = `${stringified}${configuration.api_key}`;
 
   const hash:string = crypto.createHash('md5').update(string_to_hash).digest('hex');
 

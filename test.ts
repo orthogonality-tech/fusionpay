@@ -1,6 +1,6 @@
 import fusionPay from './src';
 
-const API_KEY = 'abcdefgh';
+const API_KEY = 'abcdefghg';
 
 const params = {
   "a": null,
