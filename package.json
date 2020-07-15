@@ -4,6 +4,7 @@
   "description": "",
   "main": "dist/index.js",
   "dependencies": {
+    "axios": "0.19.2",
     "query-string": "6.13.1"
   },
   "devDependencies": {
@@ -29,7 +30,7 @@
   "author": "Stavros Zavrakas",
   "license": "ISC",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/orthogonality-tech/fusionpay"
+    "type": "git",
+    "url": "https://github.com/orthogonality-tech/fusionpay"
   }
 }

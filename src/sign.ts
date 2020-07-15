@@ -2,9 +2,7 @@ import crypto from 'crypto';
 import queryString from 'query-string';
 import configuration from './configuration';
 
-interface Payload {
-  [key: string]: string | object | null | number 
-};
+type Payload = Record<string, unknown>;
 
 const valid_types = [
   'string',
@@ -33,7 +31,7 @@ function sign(payload: Payload): string {
 
   const stringified: string = queryString.stringify(payload_to_sign);
 
-  const string_to_hash: string = `${stringified}${configuration.api_key}`;
+  const string_to_hash: string = decodeURIComponent(`${stringified}${configuration.api_key}`);
 
   const hash:string = crypto.createHash('md5').update(string_to_hash).digest('hex');
 
