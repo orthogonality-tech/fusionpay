@@ -11,25 +11,21 @@ This module is the implementation of the process above.
 ```
 const fusionPay = require('fusionpay-sdk');
 
+const API_URL = 'https://merchant.fusionpay.co.uk/api/v2';
 const API_KEY = 'abcdefgh';
+const CLIENT_ID = 'my_client_id';
 
 fusionPay.initialize({
-  api_key: API_KEY
+  api_url: API_URL,
+  api_key: API_KEY,
+  client_id: CLIENT_ID
 });
 
-const params = {
-  "a": null,
-  "b": "xyz",
-  "c": 123,
-  "d": "",
-  "e": {
-    "f": "abc",
-    "g": "000"
-  }
-};
+const result = await fusionPay.api.app_alipay_online({
+  amount: 0.02,
+  order_detail: 'FusionPay order',
+  reference: 'Reference 123',
+});
 
-const signature = fusionPay.sign(params);
-console.log('The signature is', signature);
-
-// Use axios to fire the request
+console.log('resultresult', result);
 ```

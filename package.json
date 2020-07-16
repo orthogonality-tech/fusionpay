@@ -1,6 +1,6 @@
 {
   "name": "fusionpay-sdk",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "",
   "main": "dist/index.js",
   "dependencies": {
@@ -22,6 +22,8 @@
   },
   "scripts": {
     "compile": "tsc",
+    "generate:typings": "tsc -d --declarationDir dist --declarationMap --emitDeclarationOnly",
+    "prepublish": "npm run compile && npm run generate:typings",
     "watch": "tsc -w",
     "lint": "tslint -p tsconfig.json",
     "execute": "ts-node test.ts",
